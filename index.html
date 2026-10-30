@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selvakumar S | Web Developer Portfolio</title>
+<meta name="description" content="Selvakumar S — Final-year B.Sc. Computer Science student with practical exposure to web development, digital tools, office automation and marketing activities.">
+<meta property="og:title" content="Selvakumar S | Web Developer Portfolio">
+<meta property="og:description" content="Final-year B.Sc. Computer Science student with practical exposure to web development, digital tools, office automation and marketing activities.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23e23636%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22white%22>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+<canvas id="webCanvas"></canvas>
+<div class="web-cursor" id="webCursor"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">&lt; SELVAKUMAR /&gt;</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#github">GitHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark and light mode" title="Toggle theme">
+        <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+      </button>
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="web-corner web-corner-tl" aria-hidden="true"></div>
+  <div class="web-corner web-corner-br" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1 class="hero-name">SELVAKUMAR S<span class="dot">.</span></h1>
+      <p class="hero-subtitle">B.Sc. Computer Science Student</p>
+      <p class="hero-role">
+        <span>I swing through</span>
+        <span class="role-rotator" id="roleRotator"></span>
+      </p>
+      <p class="hero-desc">Final-year B.Sc. Computer Science student with practical exposure to web development, digital tools, office automation and marketing activities. Internship-trained in Web Development, with hands-on marketing support experience at Rooster Academy. A quick learner with a strong interest in technology, communication and practical problem solving.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="assets/resume.pdf" class="btn btn-outline" download>Download Resume</a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/selvakumarppm552-coder" target="_blank" rel="noopener" aria-label="GitHub profile" class="social-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.35-3.88-1.35-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.27 5.7.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+        </a>
+        <a href="mailto:selvakumarppm555@gmail.com" aria-label="Send email" class="social-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>
+        </a>
+        <a href="#" id="linkedinPlaceholder" aria-label="LinkedIn (add your link)" class="social-icon" title="Add your LinkedIn URL in script.js CONFIG">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-.96 1.84-1.97 3.78-1.97 4.04 0 4.79 2.56 4.79 5.9V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-code">
+      <div class="code-window">
+        <div class="code-titlebar">
+          <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+          <span class="code-filename">developer.js</span>
+        </div>
+        <pre class="code-body"><code><span class="c-kw">const</span> <span class="c-var">developer</span> = {
+  <span class="c-key">name</span>: <span class="c-str">"Selvakumar S"</span>,
+  <span class="c-key">role</span>: <span class="c-str">"Computer Science Student"</span>,
+  <span class="c-key">education</span>: <span class="c-str">"B.Sc Computer Science"</span>,
+  <span class="c-key">focus</span>: <span class="c-str">"Web Development"</span>,
+  <span class="c-key">location</span>: <span class="c-str">"Namakkal, Tamil Nadu"</span>,
+  <span class="c-key">status</span>: <span class="c-str">"Friendly neighborhood learner"</span>
+};<span class="code-cursor">|</span></code></pre>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-hidden="true"><span></span></a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-inner about-grid">
+    <div class="about-copy">
+      <p class="section-eyebrow">About Me</p>
+      <h2 class="section-title">Behind the mask, just a student who likes building things</h2>
+      <p>I am a Final-year B.Sc. Computer Science student with practical exposure to web development, digital tools, office automation and marketing activities. I completed internship training in Web Development and gained hands-on experience supporting marketing activities at Rooster Academy. I am a quick learner with strong interest in technology, communication and practical problem solving.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-card">
+        <span class="stat-num">Final Year</span>
+        <span class="stat-label">B.Sc. Computer Science</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">5.90</span>
+        <span class="stat-label">Current CGPA</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Professional Experiences</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Certifications / Training</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER OBJECTIVE -->
+<section id="objective" class="section objective-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Career Objective</p>
+    <blockquote class="objective-quote">
+      To start my professional career in a growth-oriented organization where I can apply my Computer Science knowledge, web development skills, digital-tool experience and communication abilities while continuously learning and contributing to the organization.
+    </blockquote>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Skills &amp; Technologies</p>
+    <h2 class="section-title">My web of skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Web Development</h3>
+        <ul>
+          <li>HTML &amp; CSS</li>
+          <li>Web Development Fundamentals</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <ul>
+          <li>Python – Basics</li>
+          <li>Java – Basics</li>
+          <li>C / C++ – Basics</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Digital</h3>
+        <ul>
+          <li>MS Office &amp; Digital Tools</li>
+          <li>Digital Marketing Fundamentals</li>
+          <li>Social Media &amp; Content Support</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Professional</h3>
+        <ul>
+          <li>Communication &amp; Teamwork</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Experience</p>
+    <h2 class="section-title">Where I've swung by</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Web Development Intern</h3>
+          <p class="timeline-org">Nxtlogic Software Solutions</p>
+          <p>Completed practical internship training in Web Development and worked with web-development concepts and workflows.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Marketing Experience</h3>
+          <p class="timeline-org">Rooster Academy</p>
+          <p>Supported marketing activities, communication, content coordination and day-to-day promotional tasks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Education</p>
+    <h2 class="section-title">Training grounds</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3>B.Sc. Computer Science</h3>
+        <p class="edu-school">Erode Arts and Science College (Autonomous), Erode</p>
+        <p class="edu-meta">Final Year • CGPA: 5.90</p>
+      </div>
+      <div class="edu-card">
+        <h3>Higher Secondary (HSC)</h3>
+        <p class="edu-school">Govt. Boys Hr. Sec. School, Tiruchengode</p>
+        <p class="edu-meta">2024 • 56.0%</p>
+      </div>
+      <div class="edu-card">
+        <h3>Secondary School (SSLC)</h3>
+        <p class="edu-school">SPB High School, Pallipalayam</p>
+        <p class="edu-meta">2022 • 64.4%</p>
+      </div>
+    </div>
+
+    <div class="academic-highlights">
+      <h3 class="sub-title">Academic Highlights</h3>
+      <div class="highlight-row">
+        <div class="highlight-card">
+          <span class="highlight-label">SSLC</span>
+          <span class="highlight-pct">64.4%</span>
+          <div class="progress-track"><div class="progress-fill" style="--pct:64.4%"></div></div>
+          <span class="highlight-sub">322 / 500</span>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-label">HSC</span>
+          <span class="highlight-pct">56.0%</span>
+          <div class="progress-track"><div class="progress-fill" style="--pct:56%"></div></div>
+          <span class="highlight-sub">336 / 600</span>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-label">B.Sc. Computer Science</span>
+          <span class="highlight-pct">CGPA 5.90</span>
+          <div class="progress-track"><div class="progress-fill" style="--pct:59%"></div></div>
+          <span class="highlight-sub">Final Year</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Certifications &amp; Training</p>
+    <h2 class="section-title">Proof in the web</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
+        </div>
+        <h3>Web Development Internship Certificate of Merit</h3>
+        <p>Nxtlogic Software Solutions</p>
+        <a href="assets/certificates/web-development-certificate.pdf" class="cert-link" download>View Certificate</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
+        </div>
+        <h3>Course Completion Certificate — Digital Tools for Office Automation</h3>
+        <p>School of Computer Science, Erode Arts and Science College</p>
+        <a href="assets/certificates/digital-tools-certificate.pdf" class="cert-link" download>View Certificate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Projects &amp; Learning</p>
+    <h2 class="section-title">Still weaving these together</h2>
+    <div class="project-grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">GitHub</p>
+    <h2 class="section-title">Explore My GitHub</h2>
+    <p class="github-desc">Explore my repositories, coding work and learning journey.</p>
+    <div id="githubRepos" class="repo-grid"></div>
+    <div class="github-cta">
+      <a href="https://github.com/selvakumarppm552-coder" target="_blank" rel="noopener" class="btn btn-primary">Visit GitHub Profile</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="section resume-section">
+  <div class="section-inner resume-inner">
+    <div>
+      <p class="section-eyebrow">Resume</p>
+      <h2 class="section-title">Get the full story</h2>
+      <p>Download or preview my complete resume for internships and entry-level opportunities.</p>
+    </div>
+    <div class="resume-buttons">
+      <a href="assets/resume.pdf" class="btn btn-primary" download>Download Resume</a>
+      <a href="assets/resume.pdf" class="btn btn-outline" target="_blank">View Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Let's Connect</p>
+    <h2 class="section-title">Send up a signal</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a href="tel:+918610183729" class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"/></svg>
+          <span>8610183729</span>
+        </a>
+        <a href="mailto:selvakumarppm555@gmail.com" class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>
+          <span>selvakumarppm555@gmail.com</span>
+        </a>
+        <div class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Namakkal, Tamil Nadu</span>
+        </div>
+        <a href="https://github.com/selvakumarppm552-coder" target="_blank" rel="noopener" class="contact-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.35-3.88-1.35-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.27 5.7.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.2.67.8.56A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+          <span>github.com/selvakumarppm552-coder</span>
+        </a>
+        <p class="languages-line">Languages: Tamil, English</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note">This site has no backend — Send Message opens your email app with the message pre-filled.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-logo">&lt; SELVAKUMAR /&gt;</p>
+      <p class="footer-tag">Computer Science Student • Web Development • Digital Skills</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/selvakumarppm552-coder" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:selvakumarppm555@gmail.com">selvakumarppm555@gmail.com</a>
+      <a href="tel:+918610183729">8610183729</a>
+      <span>Namakkal, Tamil Nadu</span>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Selvakumar S. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
